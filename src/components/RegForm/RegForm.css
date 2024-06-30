@@ -27,7 +27,8 @@
     color: #fff;
     font-weight: 100;
     text-align: center;
-    padding: 30px 60px;
+    font-size: 12px;
+    padding: 30px 30px;
 }
 
 .form-right .close-btn {
@@ -123,7 +124,7 @@ option{
 }
 
 .uploadingBoxText {
-    font-size: 18px;
+    font-size: 13px;
     color: rgba(0, 0, 0, 0.4);
 }
 
@@ -163,6 +164,11 @@ option{
         margin-bottom: 0;
     }
 
+    .form-left .carousel-text{
+        font-size: 15px;
+        padding: 30px 30px;
+    }
+
     .form-right {
         flex-grow: 1;
         padding: 80px 80px;
@@ -174,6 +180,7 @@ option{
 
     .inp-type-one-container {
         grid-template-columns: 1fr 1fr;
+        column-gap: 5%;
     }
 
     .upBtnContainer{

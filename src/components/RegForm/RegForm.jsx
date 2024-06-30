@@ -153,7 +153,7 @@ const RegForm = () => {
                             <label htmlFor="serialNum">
                                 Serial Number <span className="red-text">*</span>
                             </label>
-                            <input value={formState.serialNum} onChange={handleChange} type="text" id="serialNum" name="serialNum" required />
+                            <input placeholder='Enter serial number' value={formState.serialNum} onChange={handleChange} type="text" id="serialNum" name="serialNum" required />
                         </div>
 
                         <div className="inp-type-one">

@@ -153,7 +153,15 @@ const RegForm = () => {
                             <label htmlFor="serialNum">
                                 Serial Number <span className="red-text">*</span>
                             </label>
-                            <input placeholder='Enter serial number' value={formState.serialNum} onChange={handleChange} type="text" id="serialNum" name="serialNum" required />
+                            <input 
+                            placeholder='Enter 10 digit serial number' 
+                            value={formState.serialNum} 
+                            onChange={handleChange} 
+                            type="text" 
+                            id="serialNum" 
+                            name="serialNum" 
+                            pattern="[0-9]{10}"
+                            required />
                         </div>
 
                         <div className="inp-type-one">
@@ -182,7 +190,7 @@ const RegForm = () => {
                             required
                             hidden
                         />
-                        <label htmlFor="productImage" className="uploadBox" onDragOver={handleDragOver} onDrop={handleDrop}>
+                        <label required htmlFor="productImage" className="uploadBox" onDragOver={handleDragOver} onDrop={handleDrop}>
                             {selectedFile ? (
                                 <span>
                                     {selectedFile.name} uploaded successfully✅

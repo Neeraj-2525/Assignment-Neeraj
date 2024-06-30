@@ -153,6 +153,10 @@ option{
     cursor: not-allowed;
 }
 
+input[name="serialNum"]{
+    padding: 12px 0;
+}
+
 @media only screen and (min-width: 768px) {
     .regFormWrapper {
         display: flex;

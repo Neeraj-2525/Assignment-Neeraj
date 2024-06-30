@@ -13,7 +13,7 @@
 .form-right {
     background-color: #ffffff;
     max-width: 100%;
-    padding: 80px 80px;
+    padding: 30px 30px;
     box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.1), -5px -1px 5px rgba(0, 0, 0, 0.1);
     position: relative;
 }
@@ -46,9 +46,10 @@
 }
 
 form>h1 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 400;
     padding-bottom: 15px;
+    padding-right: 5px;
 }
 
 .inp-type-one {
@@ -85,8 +86,7 @@ option{
 
 .inp-type-one-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 5%;
+    grid-template-columns: 1fr;
     row-gap: 30px;
 }
 
@@ -165,6 +165,15 @@ option{
 
     .form-right {
         flex-grow: 1;
+        padding: 80px 80px;
+    }
+
+    form>h1 {
+        font-size: 1.5rem;
+    }
+
+    .inp-type-one-container {
+        grid-template-columns: 1fr 1fr;
     }
 
     .upBtnContainer{

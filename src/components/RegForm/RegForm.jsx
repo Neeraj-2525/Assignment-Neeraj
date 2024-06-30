@@ -73,7 +73,6 @@ const RegForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setSelectedFile(null);
         const { category, model, serialNum, dateOfInvoice, productImage } = formState;
         dispatch(addProduct({ category, model, serialNum, dateOfInvoice, productImage }));
         const selectedFile = e.target.elements.productImage.files[0];
@@ -88,15 +87,20 @@ const RegForm = () => {
         await fetch(`${host}/api/products/upload`, {
             method: 'POST',
             body: formData,
-        })
-
-        setFormState({
+        }).then(()=>{
+            setSelectedFile(null);
+            setFormState({
             category: '',
             model: '',
             serialNum: '',
             dateOfInvoice: '',
             productImage: '',
         })
+        }).catch((e)=>{
+            console.log('cant connect to backend!')
+        })
+
+        
     }
 
 

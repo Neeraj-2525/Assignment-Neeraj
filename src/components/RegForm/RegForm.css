@@ -1,0 +1,182 @@
+.regFormWrapper {
+    max-width: calc(100% - 20px);
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 50px 20px;
+}
+
+.form-left {
+    background-color: #110d0d;
+    margin-bottom: 50px;
+}
+
+.form-right {
+    background-color: #ffffff;
+    max-width: 100%;
+    padding: 80px 80px;
+    box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.1), -5px -1px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+
+.form-left .slideshow-container {
+    background-color: #110d0d;
+}
+
+.form-left .carousel-text{
+    color: #fff;
+    font-weight: 100;
+    text-align: center;
+    padding: 30px 60px;
+}
+
+.form-right .close-btn {
+    position: absolute;
+    color: #000;
+    top: 20px;
+    right: 20px;
+    border: 2px solid #000;
+    font-size: 22px;
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    line-height: 2%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+form>h1 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-bottom: 15px;
+}
+
+.inp-type-one {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.inp-type-one label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.inp-type-one input,
+.inp-type-one select {
+    font-size: 14px;
+    border: rgba(0, 0, 0, 0.1) 2px solid;
+    border-radius: 5px;
+    padding: 8px 0px;
+    cursor: pointer;
+}
+
+.inp-type-one input::placeholder {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+option{
+    color: #110d0d;
+}
+
+
+
+.inp-type-one-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5%;
+    row-gap: 30px;
+}
+
+.red-text {
+    color: #ff0000;
+}
+
+.uploadBoxContainer {
+    margin-top: 30px;
+}
+
+
+.uploadBox {
+    max-width: 100%;
+    height: 130px;
+    padding: 25px;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+    color: #cccccc;
+    border: 4px dashed rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.uploadBoxLabelText {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.uploadingBoxText {
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.uploading,
+.uploadingSuccess {
+    display: none;
+}
+
+.upBtnContainer{
+    text-align: center;
+}
+
+.uploadBtn {
+    background-color: #ff0000;
+    border: none;
+    border-radius: 40px;
+    padding: 10px 50px;
+    color: #fff;
+    margin-top: 30px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.inactive{
+    opacity: 50%;
+    cursor: not-allowed;
+}
+
+@media only screen and (min-width: 768px) {
+    .regFormWrapper {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .form-left{
+        max-width: 30%;
+        margin-bottom: 0;
+    }
+
+    .form-right {
+        flex-grow: 1;
+    }
+
+    .upBtnContainer{
+        text-align: left;
+    }
+
+    .uploadBtn {
+        font-size: 14px;
+    }
+
+    .uploadBox{
+        height: 110px;
+    }
+    
+}

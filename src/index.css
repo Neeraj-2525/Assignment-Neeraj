@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cabin", sans-serif;
+    scroll-behavior: smooth;
+}
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+}
+
+.display-data{
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.show-data-btn{
+    padding: 10px 20px;
+    background-color: #2c0505;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.05);
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.product-list{
+    text-align: left;
+    margin: 0 auto;
+    padding: 20px 80px;
+    background-color: #e6e6e6;
+}

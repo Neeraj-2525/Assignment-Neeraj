@@ -1,0 +1,112 @@
+.header-container {
+    width: 100%;
+    padding: 0 20px;
+    background-color: #212121;
+    color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.01);
+    z-index: 99;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .header-container {
+      padding: 0 40px;
+    }
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .header-content {
+      height: 80px;
+    }
+  }
+  
+  .header-content .left {
+    list-style-type: none;
+    display: none;
+    gap: 25px;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .header-content .left {
+      display: flex;
+    }
+  }
+  
+  .header-content .left li {
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  
+  .header-content .center {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .header-content .center {
+      font-size: 34px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  
+  .header-content .right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .header-content .right {
+      gap: 25px;
+    }
+  }
+  
+  .header-content .right svg {
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .header-content .right svg {
+      font-size: 24px;
+    }
+  }
+  
+  .header-content .right .shopping-cart {
+    position: relative;
+  }
+  
+  .header-content .right .shopping-cart span {
+    position: absolute;
+    min-width: 20px;
+    text-align: center;
+    background: #8e2de2;
+    padding: 2.5px;
+    top: -5px;
+    right: -12px;
+    font-size: 12px;
+    line-height: 1;
+    border-radius: 10px;
+  }
+  
+  .header-container.sticky-header {
+    transform: translateY(-80px);
+    position: sticky;
+    background: #fff;
+    color: #212121;
+    box-shadow: 0 1px 5px #00000025;
+  }

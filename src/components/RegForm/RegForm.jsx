@@ -38,7 +38,7 @@ const RegForm = () => {
 
 
     const handleImageChange = (e) => {
-        if(!e.target.files){ // cheking if it exists or not
+        if (!e.target.files) { // cheking if it exists or not
             return
         }
 
@@ -68,7 +68,7 @@ const RegForm = () => {
         const file = e.dataTransfer.files[0];
         setSelectedFile(file);
         handleImageChange(e); // Reusimg handleFileChange for validation and preview
-      };
+    };
 
 
 
@@ -85,23 +85,23 @@ const RegForm = () => {
         formData.append('dateOfInvoice', dateOfInvoice);
         formData.append('productImage', selectedFile);
 
-        await fetch(`${host}/api/products/upload`, {
+        const res = await fetch(`${host}/api/products/upload`, {
             method: 'POST',
             body: formData,
-        }).then(()=>{
+        }).then(() => {
             setSelectedFile(null);
             setFormState({
-            category: '',
-            model: '',
-            serialNum: '',
-            dateOfInvoice: '',
-            productImage: '',
-        })
-        }).catch((e)=>{
+                category: '',
+                model: '',
+                serialNum: '',
+                dateOfInvoice: '',
+                productImage: '',
+            })
+        }).catch((e) => {
             console.log('cant connect to backend!')
         })
 
-        
+        res.status(200).json(data);
     }
 
 
@@ -154,15 +154,15 @@ const RegForm = () => {
                             <label htmlFor="serialNum">
                                 Serial Number <span className="red-text">*</span>
                             </label>
-                            <input 
-                            placeholder='Enter 10 digit serial number' 
-                            value={formState.serialNum} 
-                            onChange={handleChange} 
-                            type="text" 
-                            id="serialNum" 
-                            name="serialNum" 
-                            pattern="[0-9]{10}"
-                            required />
+                            <input
+                                placeholder='Enter 10 digit serial number'
+                                value={formState.serialNum}
+                                onChange={handleChange}
+                                type="text"
+                                id="serialNum"
+                                name="serialNum"
+                                pattern="[0-9]{10}"
+                                required />
                         </div>
 
                         <div className="inp-type-one">
@@ -204,7 +204,7 @@ const RegForm = () => {
                         </label>
 
                         <div className="upBtnContainer">
-                            <button className={`uploadBtn ${selectedFile?"":"inactive"}`} type="submit">
+                            <button className={`uploadBtn ${selectedFile ? "" : "inactive"}`} type="submit">
                                 Submit
                             </button>
                         </div>

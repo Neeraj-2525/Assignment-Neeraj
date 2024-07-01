@@ -35,7 +35,7 @@ const App = () => {
           {showBtnTxt}
         </span>
         <div className="data-container">
-          {products.map((product,i)=>{
+          {products.slice().reverse().map((product,i)=>{
             return (
               <div className='product-list' key={i}>
                 <h3>{product.model}</h3>

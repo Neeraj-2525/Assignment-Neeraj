@@ -27,7 +27,7 @@ const App = () => {
   };
   
   return (
-    <div className='main-content'>
+    <div className='main-content'> 
       <Header />
       <RegForm />
       <div className="display-data">

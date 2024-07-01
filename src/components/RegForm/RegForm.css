@@ -2,12 +2,13 @@
     max-width: calc(100% - 20px);
     margin: 0 auto;
     overflow: hidden;
-    padding: 50px 20px;
+    padding: 30px 20px;
 }
 
 .form-left {
     background-color: #110d0d;
     margin-bottom: 50px;
+    border-radius: 5px;
 }
 
 .form-right {
@@ -16,6 +17,7 @@
     padding: 30px 30px;
     box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.1), -5px -1px 5px rgba(0, 0, 0, 0.1);
     position: relative;
+    border-radius: 5px;
 }
 
 
@@ -109,7 +111,6 @@ option{
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-family: "Quicksand", sans-serif;
     font-weight: 500;
     font-size: 20px;
     cursor: pointer;
@@ -159,6 +160,7 @@ input[name="serialNum"]{
 
 @media only screen and (min-width: 768px) {
     .regFormWrapper {
+        max-width: 1200px;
         display: flex;
         flex-direction: row;
     }
@@ -197,6 +199,11 @@ input[name="serialNum"]{
 
     .uploadBox{
         height: 110px;
+    }
+
+    .uploadingBoxText {
+        font-size: 16px;
+        color: rgba(0, 0, 0, 0.4);
     }
     
 }

@@ -29,6 +29,6 @@
     }
 
     .carousel-slide {
-       height: 60vh;
+       min-height: 50vh;
    }
 }

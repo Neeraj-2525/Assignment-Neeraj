@@ -7,7 +7,8 @@ const App = () => {
   const [products, setProducts] = useState([]);
   const [showBtnTxt, setShowBtntxt] = useState("Show All Products");
 
-  const host = "http://localhost:5000";
+  // const host = "http://localhost:5000";
+  const host = "https://assignment-backend-rouge.vercel.app";
   const handleShowDataClick = async () => {
     try {
       const res = await fetch(`${host}/api/products/details`);

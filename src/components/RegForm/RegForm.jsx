@@ -7,7 +7,8 @@ import modelOptions from './modelData';
 
 
 const RegForm = () => {
-    const host = "http://localhost:5000";
+    // const host = "http://localhost:5000";
+    const host = "https://assignment-backend-rouge.vercel.app";
     const [formState, setFormState] = useState({
         category: '',
         model: '',

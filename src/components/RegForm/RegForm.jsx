@@ -7,8 +7,8 @@ import modelOptions from './modelData';
 
 
 const RegForm = () => {
-    // const host = "http://localhost:5000";
-    const host = "https://assignment-backend-rouge.vercel.app";
+    const host = "http://localhost:5000";
+    // const host = "https://assignment-backend-rouge.vercel.app";
     const [formState, setFormState] = useState({
         category: '',
         model: '',
@@ -85,7 +85,7 @@ const RegForm = () => {
         formData.append('dateOfInvoice', dateOfInvoice);
         formData.append('productImage', selectedFile);
 
-        const res = await fetch(`${host}/api/products/upload`, {
+        await fetch(`${host}/api/products/upload`, {
             method: 'POST',
             body: formData,
         }).then(() => {
@@ -100,13 +100,9 @@ const RegForm = () => {
         }).catch((e) => {
             console.log('cant connect to backend!')
         })
-
-        res.status(200).json(data);
+        
     }
 
-
-
-    // EVENT LISTNERS HERE
 
 
 

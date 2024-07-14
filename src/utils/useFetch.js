@@ -1,28 +1,29 @@
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
 
 
 
 const useFetch = (endPoint) => {
     const [data, setData] = useState();
-    const formData = useSelector("formInpValue");
+    const host = import.meta.env.VITE_APP_LOCAL_HOST;
 
     useEffect(() => {
         makeApiCall();
-    }, [endPoint]);
+    }, []);
 
-    const makeApiCall = async () => {
+    async function makeApiCall() {
         try {
-            if(endPoint=="/upload"){
-                const res = await fetch('/api/products/upload', {
-                    method: 'POST',
-                    body: formData,
-                });
-                
-                setData(res.json())
+            if (endPoint === "/details") {
+                const res = await fetch(`${host}/api/products/details`);
+
+                if (!res.ok) {
+                    throw new Error(`Error fetching data: ${res.status}`);
+                }
+
+                const resJson = await res.json();
+                setData(resJson);
             }
         } catch (error) {
-            console.log("Some error ocurred")
+            console.log("Some error ocurred guys")
         }
 
     }

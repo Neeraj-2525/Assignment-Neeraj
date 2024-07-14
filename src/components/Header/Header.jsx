@@ -1,12 +1,12 @@
 import "./Header.css";
 import { Heart, Search as SearchIco, ShoppingCart } from "lucide-react";
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import useFetch from "../../utils/useFetch";
 
 
 
 const Header = () => {
-  return (
+  return ( 
     <>
       <header className="header-container">
         <div className="header-content">
